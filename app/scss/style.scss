@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 @import 'media';
 
 .menu {
@@ -128,7 +129,7 @@
   &__element:not(:last-child) {
       margin-bottom: 20px;
   }
-  
+
   .address {
     &__item:not(:last-child) {
     margin-bottom: 20px;
@@ -177,7 +178,7 @@
  
   &__btn {
     margin-top: 40px;
-    padding: 15px 17px 15px;
+    padding: 15px 17px;
     border: 0;
     color: $white;
     background-color: #a3bbc8;
@@ -185,5 +186,81 @@
     &:hover {
       background-color: $blue;
     }
+  }
+}
+
+.slider {
+  &__inner {
+    padding: 100px 0 85px;
+    background-color: $slider-bg;
+  }
+  &__items,
+  .slick-dots {
+    display: flex!important;/*не нашла файл с написанным inline-block свойством*/ 
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    width: 100%;
+    max-width: 405px;
+    margin-right: 120px;
+  }
+  &__title {
+    margin-bottom: 45px;
+    @extend %rubik-400;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: $title;
+  }
+  &__content p {
+    @extend %rubik-400;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  &__link {
+    display: block;
+    max-width: 200px;
+    position: relative;
+    padding: 20px;
+    background-color: #a3bbc8;
+    color: $white;
+    transition: background-color 0.3s linear;
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &__link::after {
+    position: absolute;
+    content: url("../images/header__slider/arrow-right.png");
+    right: 20px;
+  }
+  &__img {
+    background-image: url('../images/header__slider/Ellipse_header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 635px;
+    display: flex;
+    align-items: center;
+  }
+  &__picture {
+    margin-right: 60px;
+  }
+
+  .slick-dots li:not(:last-child) {
+      margin-right: 12px;
+    }
+  .slick-dots button {
+    border: 0;
+    background-color: #fde3cc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s linear;
+  }
+  .slick-active button {
+    background-color: $white;
   }
 }
