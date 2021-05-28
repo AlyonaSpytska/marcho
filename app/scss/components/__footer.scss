@@ -1,0 +1,92 @@
+.footer {
+  @extend %quicksand-400;
+  font-size: 14px;
+  color: $footer-link;
+  &__items,
+  .disclaimer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__items {
+    padding-bottom: 75px;
+    border-bottom: 1px solid #a3bbc8;
+  }
+  &__logo {
+    display: block;
+  }
+  &__logo,
+  &__title {
+    margin-bottom: 28px;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $footer-title;
+  }
+  &__link {
+    transition: color 0.3s ease;
+    &:hover {
+      color: $bgc-nav;
+    }
+  }
+  &__element:not(:last-child) {
+      margin-bottom: 20px;
+  }
+
+  .address {
+    &__item:not(:last-child) {
+    margin-bottom: 20px;
+    }
+    &__item p:not(:last-child){
+    padding-bottom: 15px;
+    }
+    &__link {
+    transition: color 0.3s ease;
+    &:hover {
+      color: $bgc-nav;
+      }
+    }
+  }
+
+  .disclaimer {
+    padding: 37px 0 42px;
+    &__items {
+      display: flex;
+    }
+    &__item:not(:last-child) {
+      padding: 0 15px;
+      border-right: 1px solid $footer-link;
+    }
+    &__item:last-child {
+        padding-left: 15px;
+    }
+  }
+
+  &__item p {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  &__input {
+    margin-right: -5px;
+    padding: 15px;
+    background-color: #fef7f0;
+    border: 0;
+    &::placeholder {
+    @extend %quicksand-400;
+    font-size: 12px;
+    color: $blue;
+    }
+  }
+ 
+  &__btn {
+    margin-top: 40px;
+    padding: 15px 17px;
+    border: 0;
+    color: $white;
+    background-color: #a3bbc8;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}

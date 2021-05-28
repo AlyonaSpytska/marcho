@@ -1,0 +1,132 @@
+.slider {
+  &__inner {
+    padding: 100px 0 85px;
+    background-color: $slider-bg;
+  }
+  &__items,
+  .slick-dots {
+    display: flex!important;/*не нашла файл с написанным inline-block свойством*/ 
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    width: 100%;
+    max-width: 405px;
+    margin-right: 120px;
+  }
+  &__title {
+    margin-bottom: 45px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $title;
+  }
+  &__content p {
+    @extend %rubik-400;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  &__link {
+    display: block;
+    max-width: 200px;
+    position: relative;
+    padding: 20px;
+    background-color: #a3bbc8;
+    color: $white;
+    transition: background-color 0.3s linear;
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &__link::after {
+    position: absolute;
+    content: url("../images/header__slider/arrow-right.png");
+    right: 20px;
+  }
+  &__img {
+    background-image: url('../images/header__slider/Ellipse_header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 635px;
+    display: flex;
+    align-items: center;
+  }
+  &__picture {
+    margin-right: 60px;
+  }
+
+  .slick-dots li:not(:last-child) {
+      margin-right: 12px;
+    }
+  .slick-dots button {
+    border: 0;
+    background-color: #fde3cc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s linear;
+  }
+  .slick-active button {
+    background-color: $white;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fef7f0;
+    &__items {     
+      width: 100%;
+      max-width: 600px;
+      min-height: 170px;
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        border-right: 1px solid #e8e4df;
+      }
+    }
+    &__item {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    &__item p {
+      max-width: 300px;
+      padding-left: 80px;
+      margin-top: 10px;//не смогла задать span mar-bot
+      color: #585858;
+      line-height: 1.4;
+      @extend %quicksand-400;
+    }
+    &__span {
+      position: relative;
+      padding-left: 80px;
+      font-size: 18px;
+      @extend %quicksand-700;
+      color: #414141;
+    }
+    &__span::before {
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 50px;
+      height: 50px;
+      left: 0;
+    }
+    &__span--supp::before {
+      background-image: url('../images/info/Shape 1.png');
+    }
+    &__span--del::before {
+      background-image: url('../images/info/deluvery.png');
+    }
+    &__span--pay::before {
+      background-image: url('../images/info/card.png');
+    }
+  }
+}

@@ -3,4 +3,5 @@ $(function(){
     arrows: false,
     dots: true
   });
+
 })
