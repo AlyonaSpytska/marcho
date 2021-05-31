@@ -2,12 +2,9 @@
   @extend %quicksand-400;
   font-size: 14px;
   color: $footer-link;
-  &__items,
-  .disclaimer {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__items {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 280px;
     padding-bottom: 75px;
     border-bottom: 1px solid #a3bbc8;
   }
@@ -22,17 +19,16 @@
     text-transform: uppercase;
     color: $footer-title;
   }
-  &__link {
-    transition: color 0.3s ease;
-    &:hover {
-      color: $bgc-nav;
-    }
-  }
-  &__element:not(:last-child) {
-      margin-bottom: 20px;
-  }
 
   .address {
+    line-height: 1.9;
+    &__item {
+      max-width: 190px;
+    }
+    &__span {
+      text-transform: uppercase;
+      font-style: normal;
+    }
     &__item:not(:last-child) {
     margin-bottom: 20px;
     }
@@ -47,8 +43,23 @@
     }
   }
 
+  &__link {
+    transition: color 0.3s ease;
+    &:hover {
+      color: $bgc-nav;
+    }
+  }
+  &__element:not(:last-child) {
+      margin-bottom: 20px;
+  }
+  &__subscribe p {
+    margin-bottom: 40px;
+  }
+
   .disclaimer {
     padding: 37px 0 42px;
+    display: flex;
+    justify-content: space-between;
     &__items {
       display: flex;
     }
@@ -59,11 +70,6 @@
     &__item:last-child {
         padding-left: 15px;
     }
-  }
-
-  &__item p {
-    width: 100%;
-    max-width: 240px;
   }
 
   &__input {
@@ -79,7 +85,6 @@
   }
  
   &__btn {
-    margin-top: 40px;
     padding: 15px 17px;
     border: 0;
     color: $white;

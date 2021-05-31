@@ -1,6 +1,8 @@
 .slider {
   &__inner {
-    padding: 100px 0 85px;
+    position: relative;
+    min-height: 820px;
+    padding-top: 100px;
     background-color: $slider-bg;
   }
   &__items,
@@ -9,14 +11,19 @@
     align-items: center;
     justify-content: center;
   }
+  .slick-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   &__content {
     width: 100%;
-    max-width: 405px;
-    margin-right: 120px;
+    max-width: 470px;
+    min-height: 365px;
   }
   &__title {
-    margin-bottom: 45px;
-    @extend %rubik-500;
+    @extend %quicksand-700;
     font-size: 72px;
     line-height: 1;
     text-transform: uppercase;
@@ -24,7 +31,8 @@
   }
   &__content p {
     @extend %rubik-400;
-    margin-bottom: 40px;
+    max-width: 356px;
+    margin: 25px 0 40px;
     font-size: 18px;
     line-height: 1.4;
   }
@@ -51,7 +59,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    min-height: 635px;
+    min-height: 607px;
     display: flex;
     align-items: center;
   }
@@ -96,17 +104,17 @@
     }
     &__item p {
       max-width: 300px;
-      padding-left: 80px;
+      padding-left: 77px;
       margin-top: 10px;//не смогла задать span mar-bot
       color: #585858;
-      line-height: 1.4;
+      line-height: 1.6;
       @extend %quicksand-400;
     }
     &__span {
       position: relative;
-      padding-left: 80px;
+      padding-left: 77px;
       font-size: 18px;
-      @extend %quicksand-700;
+      @extend %rubik-700;
       color: #414141;
     }
     &__span::before {

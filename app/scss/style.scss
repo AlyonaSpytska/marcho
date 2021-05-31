@@ -7,22 +7,4 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/slider';
-
-
-.products {
-  padding: 75px 0 85px;
-  &__filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 75px;
-  }
-  &__item:not(:last-child) {
-    margin-right: 15px;
-  }
-  &__btn {
-    border: none;
-    @extend %quicksand-700;
-    color: $gallery-button;
-  }
-}
+@import 'components/products';

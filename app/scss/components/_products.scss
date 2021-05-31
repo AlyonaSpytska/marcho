@@ -1,0 +1,83 @@
+.products {
+  padding: 65px 0 85px;
+  &__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 75px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
+  &__btn {
+    border: none;
+    @extend %quicksand-700;
+    color: $gallery-button;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+  }
+  &__line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 375px;
+    padding: 0px 10px 30px;
+    border-radius: 10px;
+    @extend %quicksand-500;
+    background-color: $white;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05%);
+  }
+  &__img {
+    margin: auto;
+  }
+  &__title {
+    margin-bottom: 9px;
+  }
+  &__price {
+    @extend %quicksand-700;
+    color: #a3bbc8;
+  }
+  &__selection {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    transition: opacity .3s;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__point:not(:last-child) {
+    margin-right: 16px;
+  }
+  &__link {
+    width: 45px;
+    height: 45px;
+    background-color: $white;
+    border-radius: 50%;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s linear, fill 0.3s linear;
+    &:hover {
+      background-color: #a3bbc8;
+    }
+  }
+  &__link svg {
+    width: 20px;
+    height: 20px;
+    fill: #a3bbc8;
+    &:hover {
+      fill: $white;
+    }
+  }
+  
+}

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee - furniture store</title>
+  <link rel="shortcut icon" href="/images/header/icon.png" type="image/png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -51,18 +52,18 @@
           </ul>
           <div class="menu__users">
             <button class="menu__user menu__user--search" type="button">
-              <span class="sr-only">Search</span>
+              <span class="sr-only">Open search input</span>
             </button>
-            <button class="menu__user menu__user menu__user--fav" type="button">
-              <span class="sr-only">Favorites</span>
+            <a class="menu__user menu__user menu__user--fav" href="#">
+              <span class="sr-only">Open your favorites</span>
               <span class="menu__num">0</span>
-            </button>
-            <button class="menu__user menu__user--basket" type="button">
-              <span class="sr-only">Basket</span>
+            </a>
+            <a class="menu__user menu__user--basket" href="#">
+              <span class="sr-only">Open your basket</span>
               <span class="menu__num">0</span>
-            </button>
+            </a>
             <button class="menu__user menu__user--option" type="button">
-              <span class="sr-only">Options</span>
+              <span class="sr-only">Open options</span>
             </button>
           </div>
         </nav>
@@ -74,12 +75,12 @@
     <section class="slider">
       <div class="container">
         <ul class="slider__inner">
-
           <li class="slider__items">
             <div class="slider__content">
-              <h2 class="slider__title">
-                smart and trandy
-              </h2>
+              <span class="slider__title">
+                smart and trendy
+              </span>
+
               <p>
                 Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
               </p>
@@ -94,17 +95,15 @@
 
           <li class="slider__items">
             <div class="slider__content">
-              <h2 class="slider__title">
-                smart and trandy
-              </h2>
+              <span class="slider__title">
+                smart and trendy
+              </span>
               <p>
                 Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
               </p>
-              <span class="slider__span">
-                <a class="slider__link" href="#">
-                  Shop Now
-                </a>
-              </span>
+              <a class="slider__link" href="#">
+                Shop Now
+              </a>
             </div>
             <div class="slider__img">
               <img class="slider__picture" src="images/header__slider/sofa.png" alt="Sofa">
@@ -113,17 +112,15 @@
 
           <li class="slider__items">
             <div class="slider__content">
-              <h2 class="slider__title">
-                smart and trandy
-              </h2>
+              <span class="slider__title">
+                smart and trendy
+              </span>
               <p>
                 Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
               </p>
-              <span class="slider__span">
-                <a class="slider__link" href="#">
-                  Shop Now
-                </a>
-              </span>
+              <a class="slider__link" href="#">
+                Shop Now
+              </a>
             </div>
             <div class="slider__img">
               <img class="slider__picture" src="images/header__slider/sofa.png" alt="Sofa">
@@ -203,47 +200,413 @@
             </button>
           </li>
         </ul>
+
+        <ul class="products__items">
+          <li class="products__line">
+            <img class="products__img" src="images/products/1.png" alt="Wooden radio">
+            <h3 class="products__title">
+              Wooden radio
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link products__link--search" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="products__line">
+            <img class="products__img" src="images/products/2.png" alt="Wooden chair">
+            <h3 class="products__title">
+              Wooden chair
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link products__link--search" href="#">
+                  <span class="sr-only">Open search input</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Open search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="products__line">
+            <img class="products__img" src="images/products/3.png" alt="White chair">
+            <h3 class="products__title">
+              White chair
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Open search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="products__line">
+            <img class="products__img" src="images/products/4.png" alt="Retro table">
+            <h3 class="products__title">
+              Retro table
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Open search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="products__line">
+            <img class="products__img" src="images/products/5.png" alt="Wooden radio">
+            <h3 class="products__title">
+              Wooden radio
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Open search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="products__line">
+            <img class="products__img" src="images/products/6.png" alt="Wooden chair">
+            <h3 class="products__title">
+              Wooden chair
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Open search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="products__line">
+            <img class="products__img" src="images/products/7.png" alt="White chair">
+            <h3 class="products__title">
+              White chair
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Open search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="products__line">
+            <img class="products__img" src="images/products/8.png" alt="Retro table">
+            <h3 class="products__title">
+              Retro table
+            </h3>
+            <span class="products__price">
+              $ 29.00
+            </span>
+
+            <ul class="products__selection">
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Open search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M759.45,1579.8l-4.588-4.59a8.827,8.827,0,0,1-2.651,2.65l4.588,4.59A1.874,1.874,0,0,0,759.45,1579.8Zm-4.45-9.3a7.5,7.5,0,1,0-7.5,7.5A7.5,7.5,0,0,0,755,1570.5Zm-7.5,5.62a5.625,5.625,0,1,1,5.625-5.62A5.628,5.628,0,0,1,747.5,1576.12Zm-4.375-5.62h1.25a3.135,3.135,0,0,1,3.125-3.13v-1.25A4.386,4.386,0,0,0,743.125,1570.5Z"
+                      transform="translate(-740 -1563)" />
+                  </svg>
+                </a>
+              </li>
+              <li class="products__point">
+                <button class="products__link products__link--basket" type="button">
+                  <span class="sr-only">Go to basket</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M800.814,1564.63h2.333l3.323,12.04a0.812,0.812,0,0,0,.787.59h10.214a0.821,0.821,0,0,0,.746-0.48l3.717-8.56a0.836,0.836,0,0,0-.068-0.78,0.813,0.813,0,0,0-.678-0.37H809.9a0.82,0.82,0,0,0,0,1.64H819.94l-3.011,6.92h-9.062l-3.323-12.03a0.808,0.808,0,0,0-.787-0.6h-2.943A0.815,0.815,0,0,0,800.814,1564.63Zm5.67,18.37a1.85,1.85,0,1,0-1.845-1.85A1.85,1.85,0,0,0,806.484,1583Zm11.53,0h0.135A1.907,1.907,0,1,0,818.014,1583Z"
+                      transform="translate(-800 -1563)" />
+                  </svg>
+                </button>
+              </li>
+              <li class="products__point">
+                <a class="products__link" href="#">
+                  <span class="sr-only">Go to favorites</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18">
+                    <path id="Forma_1" data-name="Forma 1" class="cls-1"
+                      d="M882.99,1569.82a6.208,6.208,0,0,0-1.849-4.1A5.871,5.871,0,0,0,877,1564c-2.311,0-3.948,1.78-4.827,2.74a2.156,2.156,0,0,1-.156.17l-0.083-.09c-0.8-.92-2.476-2.82-4.938-2.82a5.873,5.873,0,0,0-4.139,1.72,6.208,6.208,0,0,0-1.849,4.1,6.845,6.845,0,0,0,1.271,4.34,29.307,29.307,0,0,0,4.763,4.75c1.705,1.41,3.95,3.09,4.965,3.09,1.032,0,3.269-1.68,4.965-3.09a29.234,29.234,0,0,0,4.746-4.75A6.935,6.935,0,0,0,882.99,1569.82Zm-2.376,3.61a27,27,0,0,1-4.431,4.42c-2.406,2-3.831,2.79-4.172,2.82-0.342-.03-1.77-0.83-4.188-2.84a26.78,26.78,0,0,1-4.437-4.4,5.6,5.6,0,0,1-1.054-3.54,4.807,4.807,0,0,1,4.666-4.57c1.863,0,3.216,1.54,3.943,2.37a1.52,1.52,0,0,0,1.059.76,1.731,1.731,0,0,0,1.151-.81c0.794-.87,2.122-2.32,3.851-2.32a4.807,4.807,0,0,1,4.666,4.57A5.528,5.528,0,0,1,880.614,1573.43Z"
+                      transform="translate(-861 -1564)" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container_scnd">
-      <ul class="footer__items">
-
-        <li class="footer__item">
+      <div class="footer__wrapper">
+        <div class="footer__contact">
           <a class="footer__logo logo" href="#">
             <img class="logo__img" src="images/header/logo.png" alt="Logo">
           </a>
-          <ul class="address">
-            <li class="address__item">
-              <p>
-                <a class="address__link" href="#">
-                  ADDRESS: 4772 Wines Lane
-                </a>
-              </p>
-              <p>
-                <a class="address__link" href="#">
-                  Houston, TX 77032
-                </a>
-              </p>
-            </li>
-            <li class="address__item">
-              <p>
-                <a class="address__link" href="tel:+8323475843">
-                  TELEPHONE: +832-347-5843
-                </a>
-              </p>
-              <p>
-                <a class="address__link" href="mailto:contact@Glee.com">
-                  EMAIL: contact@Glee.com
-                </a>
-              </p>
-            </li>
-          </ul>
-        </li>
+          <address class="address">
+            <div class="address__item">
+              <span class="address__span">
+                address:
+              </span>
+              <a class="address__link" href="#">
+                4772 Wines Lane Houston, TX 77032
+              </a>
+            </div>
+            <div class="address__item">
+              <span class="address__span">
+                telephone:
+              </span>
+              <a class="address__link" href="tel:+8323475843">
+                +832-347-5843
+              </a>
+              <span class="address__span">
+                email:
+              </span>
+              <a class="address__link" href="mailto:contact@Glee.com">
+                contact@Glee.com
+              </a>
+            </div>
+          </address>
+        </div>
 
-        <li class="footer__item">
+        <div class="footer__item">
           <h3 class="footer__title">
             services
           </h3>
@@ -275,9 +638,9 @@
               </a>
             </li>
           </ul>
-        </li>
+        </div>
 
-        <li class="footer__item">
+        <div class="footer__item">
           <h3 class="footer__title">
             account
           </h3>
@@ -304,9 +667,9 @@
               </a>
             </li>
           </ul>
-        </li>
+        </div>
 
-        <li class="footer__item">
+        <div class="footer__subscribe">
           <h3 class="footer__title">
             newsletter
           </h3>
@@ -315,37 +678,41 @@
             update protidin.
           </p>
           <form class="footer__form" action="#">
-            <label for="footer__email"></label>
+            <label for="footer__email" class="sr-only">
+              Enter your e-mail
+            </label>
             <input id="footer__email" class="footer__input" type="email" placeholder="Email address" required>
             <button class="footer__btn" type="submit">Subscribe</button>
           </form>
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <div class="disclaimer">
         <p>©2020 CopyRight Example. All rights reserved.</p>
-        <ul class="disclaimer__items">
-          <li class="disclaimer__item">
-            <a href="#" class="footer__link">
-              Home
-            </a>
-          </li>
-          <li class="disclaimer__item">
-            <a href="#" class="footer__link">
-              About
-            </a>
-          </li>
-          <li class="disclaimer__item">
-            <a href="#" class="footer__link">
-              Blog
-            </a>
-          </li>
-          <li class="disclaimer__item">
-            <a href="#" class="footer__link">
-              Contact
-            </a>
-          </li>
-        </ul>
+        <nav class="footer__nav">
+          <ul class="disclaimer__items">
+            <li class="disclaimer__item">
+              <a href="#" class="footer__link">
+                Home
+              </a>
+            </li>
+            <li class="disclaimer__item">
+              <a href="#" class="footer__link">
+                About
+              </a>
+            </li>
+            <li class="disclaimer__item">
+              <a href="#" class="footer__link">
+                Blog
+              </a>
+            </li>
+            <li class="disclaimer__item">
+              <a href="#" class="footer__link">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </footer>

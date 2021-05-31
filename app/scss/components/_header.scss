@@ -2,11 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 57px 0 45px;
+    padding: 47px 0 45px;
     &__items,
     &__users {
       display: flex;
       justify-content: flex-end;
+    }
+    &__items {
+     padding-left: 150px;
     }
     &__item:not(:last-child) {
       margin-right: 30px;
