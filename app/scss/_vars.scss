@@ -1,12 +1,15 @@
 $default: #436372;
 $bgc-nav: #fcd7b6;
 $white: #fff;
+$main-title: #1a1a1a;
 $title: #243f4d;
 $footer-link: #7b7b7b;
 $footer-title: #1f2044;
 $btn-col: #a3bbc8; 
 $blue: #234969;
 $slider-bg: #fcd7b6;
+$gallery-button: #707070;
+$gallery-button-active: #1A1A1A;
 
 %quicksand-400 {
   font-family: 'DMSans-Regular', sans-serif;
@@ -36,4 +39,9 @@ $slider-bg: #fcd7b6;
 %rubik-500 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 700;
 }
