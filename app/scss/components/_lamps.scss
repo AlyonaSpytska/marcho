@@ -1,0 +1,64 @@
+.lamps {
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 390px;
+    background-color: #feefe2;
+  }
+  &__content {
+    position: relative;
+    padding-left: 255px;
+  }
+  &__content--right {
+    padding-left: 330px;
+  }
+  &__content p {
+    max-width: 346px;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    color: $lamp-color;
+  }
+  &__title {
+    text-align: left;
+    max-width: 260px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: $lamp-color;
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 405px;
+    max-width: 235px;
+  }
+  &__img--right {
+    left: 55px;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    max-width: 180px;
+    padding: 20px;
+    border: 1px solid #d8d3cc;
+    border-radius: 5px;
+    color: #243f4d;
+    transition: background-color 0.4s linear;
+    &::after {
+      position: absolute;
+      content: url('../images/lamps/arrow.svg');
+      right: 19px;
+    }
+    &:hover {
+      background-color: $btn-col;
+    }
+  }
+  
+}
