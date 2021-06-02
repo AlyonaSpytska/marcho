@@ -2,45 +2,27 @@
   @extend %quicksand-400;
   font-size: 14px;
   color: $footer-link;
+  font-style: normal;
+
   &__wrapper {
     display: grid;
     grid-template-columns: 300px 1fr 1fr 280px;
     padding-bottom: 75px;
     border-bottom: 1px solid #a3bbc8;
   }
+
   &__logo {
     display: block;
   }
+
   &__logo,
   &__title {
     margin-bottom: 28px;
   }
+
   &__title {
     text-transform: uppercase;
     color: $footer-title;
-  }
-
-  .address {
-    line-height: 1.9;
-    &__item {
-      max-width: 190px;
-    }
-    &__span {
-      text-transform: uppercase;
-      font-style: normal;
-    }
-    &__item:not(:last-child) {
-    margin-bottom: 20px;
-    }
-    &__item p:not(:last-child){
-    padding-bottom: 15px;
-    }
-    &__link {
-    transition: color 0.3s ease;
-    &:hover {
-      color: $bgc-nav;
-      }
-    }
   }
 
   &__link {
@@ -49,49 +31,63 @@
       color: $bgc-nav;
     }
   }
+
   &__element:not(:last-child) {
-      margin-bottom: 20px;
+    margin-bottom: 15px;
   }
-  &__subscribe p {
+
+  &__p {
     margin-bottom: 40px;
   }
+}
 
-  .disclaimer {
-    padding: 37px 0 42px;
-    display: flex;
-    justify-content: space-between;
-    &__items {
-      display: flex;
-    }
-    &__item:not(:last-child) {
-      padding: 0 15px;
-      border-right: 1px solid $footer-link;
-    }
-    &__item:last-child {
-        padding-left: 15px;
-    }
+.address {
+  line-height: 1.9;
+
+  &__items {
+    font-style: normal;
   }
 
-  &__input {
-    margin-right: -5px;
-    padding: 15px;
-    background-color: #fef7f0;
-    border: 0;
-    &::placeholder {
+  &__item {
+    max-width: 190px;
+  }
+
+  &__span {
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    transition: color 0.3s ease;
+    &:hover {
+      color: $bgc-nav;
+    }
+  }
+}
+
+.form__input {
+  margin-right: -5px;
+  padding: 15px;
+  background-color: #fef7f0;
+  border: 0;
+  &::placeholder {
     @extend %quicksand-400;
     font-size: 12px;
     color: $blue;
-    }
   }
- 
-  &__btn {
-    padding: 15px 17px;
-    border: 0;
-    color: $white;
-    background-color: #a3bbc8;
-    transition: background-color 0.3s ease;
-    &:hover {
-      background-color: $blue;
-    }
+}
+
+.form__btn {
+  padding: 15px 17px;
+  border: 0;
+  color: $white;
+  background-color: #a3bbc8;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $blue;
   }
 }

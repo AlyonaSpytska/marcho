@@ -21,12 +21,9 @@ body {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.container_scnd {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  &--scnd {
+    max-width: 1200px;
+  }
 }
 
 .sr-only {
@@ -46,12 +43,4 @@ body {
   text-align: center;
   color: $main-title;
   margin-bottom: 30px;
-}
-
-.lamps {
-  padding-top: 110px;
-}
-
-.design {
-  padding-top: 100px;
 }
