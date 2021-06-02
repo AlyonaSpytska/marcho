@@ -1,25 +1,18 @@
 .products {
-  padding: 65px 0 85px;
-  &__filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 75px;
+  padding-top: 65px;
+
+  &__line {
+    position: relative;
   }
-  &__item:not(:last-child) {
-    margin-right: 15px;
-  }
-  &__btn {
-    border: none;
-    @extend %quicksand-700;
-    color: $gallery-button;
-  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
+    margin-bottom: 190px;
   }
-  &__line {
+
+  &__card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -32,32 +25,41 @@
     background-color: $white;
     box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05%);
   }
-  &__img {
+
+  &__card--img {
     margin: auto;
   }
-  &__title {
+
+  &__card--title {
     margin-bottom: 9px;
   }
-  &__price {
+
+  &__card--price {
     @extend %quicksand-700;
     color: #a3bbc8;
   }
-  &__selection {
+
+  &__card--selection {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    transition: opacity .3s;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
     opacity: 0;
     &:hover {
       opacity: 1;
     }
   }
-  &__point:not(:last-child) {
+
+  &__card--point:not(:last-child) {
     margin-right: 16px;
   }
-  &__link {
+
+  &__card--link {
     width: 45px;
     height: 45px;
     background-color: $white;
@@ -67,17 +69,110 @@
     justify-content: center;
     align-items: center;
     transition: background-color 0.4s linear, fill 0.3s linear;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      &:hover {
+        fill: $white;
+      }
+    }
+
     &:hover {
       background-color: #a3bbc8;
     }
   }
-  &__link svg {
-    width: 20px;
-    height: 20px;
-    fill: #a3bbc8;
-    &:hover {
-      fill: $white;
+
+
+  .lamps {
+    &__items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 390px;
+      background-color: #feefe2;
+    }
+
+    &__content {
+      position: relative;
+      padding-left: 255px;
+    }
+
+    &__content--right {
+      padding-left: 330px;
+    }
+
+    &__content p {
+      max-width: 346px;
+      margin-bottom: 35px;
+      line-height: 1.6;
+      color: $lamp-color;
+    }
+
+    &__title {
+      text-align: left;
+      max-width: 260px;
+      margin-bottom: 10px;
+      font-size: 26px;
+      color: $lamp-color;
+    }
+
+    &__img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 405px;
+      max-width: 235px;
+    }
+
+    &__img--right {
+      left: 55px;
+    }
+    
+    &__link {
+      position: relative;
+      display: block;
+      max-width: 180px;
+      padding: 20px;
+      border: 1px solid #d8d3cc;
+      border-radius: 5px;
+      color: #243f4d;
+      transition: background-color 0.4s linear;
+      &::after {
+        position: absolute;
+        content: url("../images/lamps/arrow.svg");
+        right: 19px;
+      }
+      &:hover {
+        background-color: $btn-col;
+      }
     }
   }
-  
 }
+
+ .filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 75px;
+    &__item:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &__btn {
+      border: none;
+      @extend %quicksand-700;
+      color: $gallery-button;
+    }
+
+    .mixitup-control-active {
+      color: $main-title;
+    }
+  }

@@ -5,7 +5,7 @@ $main-title: #1a1a1a;
 $title: #243f4d;
 $footer-link: #7b7b7b;
 $footer-title: #1f2044;
-$btn-col: #a3bbc8; 
+$btn-col: rgb(163, 187, 200); 
 $blue: #234969;
 $slider-bg: #fcd7b6;
 $gallery-button: #707070;
@@ -14,17 +14,17 @@ $bg-design : #f8f8f8;
 $lamp-color: #253f4e;
 
 %quicksand-400 {
-  font-family: 'DMSans-Regular', sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 400;
 }
 
 %quicksand-500 {
-  font-family: 'DMSans-Medium', sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 500;
 }
 
 %quicksand-700 {
-  font-family: 'DMSans-Bold', sans-serif;
+  font-family: 'DMSans', sans-serif;
   font-weight: 700;
 }
 
@@ -34,16 +34,16 @@ $lamp-color: #253f4e;
 }
 
 %rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
 
 %rubik-500 {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
 
 %rubik-700 {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 700;
 }
