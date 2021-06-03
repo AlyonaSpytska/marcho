@@ -6,18 +6,19 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 300px 1fr 1fr 280px;
+    grid-template-columns: 300px 300px 300px 283px;
     padding-bottom: 75px;
     border-bottom: 1px solid #a3bbc8;
   }
 
   &__logo {
     display: block;
+    margin-top: -17px;
+    margin-bottom: 24px;
   }
 
-  &__logo,
   &__title {
-    margin-bottom: 28px;
+    margin-bottom: 22px;
   }
 
   &__title {
@@ -32,17 +33,17 @@
     }
   }
 
-  &__element:not(:last-child) {
-    margin-bottom: 15px;
+  &__p {
+    margin-bottom: 42px;
   }
 
-  &__p {
-    margin-bottom: 40px;
+  &__element {
+    margin-bottom: 12px;
   }
 }
 
 .address {
-  line-height: 1.9;
+  line-height: 1.8;
 
   &__items {
     font-style: normal;
@@ -58,7 +59,11 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
+  }
+
+  &__item p:not(:last-child) {
+    padding-bottom: 15px;
   }
 
   &__link {
@@ -71,7 +76,7 @@
 
 .form__input {
   margin-right: -5px;
-  padding: 15px;
+  padding: 9px 11px;
   background-color: #fef7f0;
   border: 0;
   &::placeholder {
@@ -82,12 +87,34 @@
 }
 
 .form__btn {
-  padding: 15px 17px;
+  padding: 9px 17px;
   border: 0;
   color: $white;
   background-color: #a3bbc8;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: $blue;
+  }
+}
+
+.disclaimer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+  font-size: 14px;
+  @extend %rubik-400;
+  color: $footer-link;
+
+  &__items {
+    display: flex;
+    
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-right: 15px;
+      border-right: 1px solid $footer-link;
+      margin-right: 15px;
+    }
   }
 }
