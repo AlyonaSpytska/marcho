@@ -1,0 +1,183 @@
+.articles {
+  min-height: 872px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    align-items: flex-end;
+    &--next {
+      position: relative;
+      padding-right: 25px;
+      color: #262626;
+      transition: color 0.3s ease;
+      @extend %quicksand-700;
+      &:hover, 
+      &:hover::after {
+        color: $bgc-nav;
+      }
+      &::after {
+        content: ">";
+        position: absolute;
+        right: 0;
+        width: 17px;
+        height: 17px;
+        color: #262626;
+      }
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  &__content {
+    margin-bottom: -171px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 370px 370px 370px;
+    grid-gap: 30px;
+  }
+
+  &__item {
+    margin: 0 auto;
+  }
+}
+
+.aricles-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+  height: 100%;
+  border-radius: 5px;
+  color: $p-color;
+
+  &__img-wrap {
+    position: relative;
+  }
+
+  &__img {
+    height: 250px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__goto {
+    position: absolute;
+    width: 100%;
+    max-width: 103px;
+    left: 28px;
+    bottom: -13px;
+    padding: 5px 31px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $btn-col;
+    transition: background-color 0.3s linear;
+    &:hover {
+      background-color: $footer-title;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 31px 14px;
+    background-color: $white;
+    min-height: 170px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    font-size: 18px;
+    @extend %quicksand-500;
+    padding-bottom: 15px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $btn-col
+    }
+  }
+
+  &--data {
+    display: flex;
+    padding-top: 14px;
+    border-top: 1px solid #e0e0e0;
+    @extend %rubik-400;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+
+  &__time {
+    position: relative;
+    padding-left: 20px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/article/calendar.svg");
+      left: 0;
+      top: 0;
+      width: 17px;
+      height: 17px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__admin {
+    position: relative;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    min-height: 15px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $btn-col;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/article/user-icon.svg");
+      left: 0;
+      top: 2;
+      width: 14px;
+      height: 15px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.carousel {
+  background-color: $bg-carousel;
+  padding: 264px 0 67px;
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  &__link {
+    height: 85px;
+  }
+
+  &__img {
+    margin: auto;
+  }
+}

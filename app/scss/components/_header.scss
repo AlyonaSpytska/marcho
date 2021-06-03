@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 47px 0 45px;
+  padding: 47px 0 48px;
 
   &__items,
   &__users {
@@ -18,7 +18,6 @@
   }
 
   &__link {
-    padding-bottom: 5px;
     @extend %rubik-400;
     transition: color 0.4s ease;
 
