@@ -1,20 +1,28 @@
 .articles {
   min-height: 872px;
+
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
     align-items: flex-end;
+
+    @include desktop-lg {
+      align-items: center;
+    }
+
     &--next {
       position: relative;
       padding-right: 25px;
       color: #262626;
       transition: color 0.3s ease;
       @extend %quicksand-700;
-      &:hover, 
+
+      &:hover,
       &:hover::after {
         color: $bgc-nav;
       }
+
       &::after {
         content: ">";
         position: absolute;
@@ -33,16 +41,36 @@
 
   &__content {
     margin-bottom: -171px;
+
+    @include desktop-md {
+      margin-bottom: 0;
+    }
   }
 
   &__items {
     display: grid;
-    grid-template-columns: 370px 370px 370px;
+    grid-template-columns: repeat(3, 370px);
     grid-gap: 30px;
+
+    @include desktop-lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop-xs {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
     margin: 0 auto;
+
+    @include desktop-xs {
+      margin: 0;
+    }
   }
 }
 
@@ -50,18 +78,23 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 370px;
   height: 100%;
   border-radius: 5px;
   color: $p-color;
 
-  &__img-wrap {
+  &__wrap {
     position: relative;
   }
 
   &__img {
+    width: 100%;
+    max-width: 370px;
     height: 250px;
     border-radius: 5px 5px 0 0;
+
+    @include desktop-xs {
+      max-width: none;
+    }
   }
 
   &__goto {
@@ -77,6 +110,13 @@
     color: $white;
     background-color: $btn-col;
     transition: background-color 0.3s linear;
+
+    @include desktop-md {
+      left: 12px;
+      max-width: 90px;
+      padding: 5px 20px;
+    }
+
     &:hover {
       background-color: $footer-title;
     }
@@ -85,14 +125,19 @@
   &__info {
     display: flex;
     flex-direction: column;
-    padding: 30px 31px 14px;
+    padding: 33px 31px 18px;
     background-color: $white;
-    min-height: 170px;
+    min-height: 170px; //сьезжает третий блок без высоты :((
+
+    @include desktop-md {
+      padding: 21px 10px 18px;
+    }
   }
 
   &__bottom {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   &__text {
@@ -100,12 +145,26 @@
     @extend %quicksand-500;
     padding-bottom: 15px;
     transition: color 0.3s ease;
+
+    @include desktop-md {
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+
+    @include desktop-xs {
+      font-size: 24px;
+    }
+
+    @include desktop-xs {
+      font-size: 18px;
+    }
+
     &:hover {
-      color: $btn-col
+      color: $btn-col;
     }
   }
 
-  &--data {
+  &__data {
     display: flex;
     padding-top: 14px;
     border-top: 1px solid #e0e0e0;
@@ -113,6 +172,10 @@
     font-size: 12px;
     text-transform: uppercase;
     margin-top: auto;
+
+    @include desktop-md {
+      justify-content: space-between;
+    }
   }
 
   &__time {
@@ -122,6 +185,10 @@
     display: flex;
     align-items: center;
     min-height: 20px;
+
+    @include desktop-md {
+      margin-right: 10px;
+    }
 
     &::before {
       content: "";
@@ -143,9 +210,11 @@
     align-items: center;
     min-height: 15px;
     transition: color 0.3s ease;
+
     &:hover {
       color: $btn-col;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -163,10 +232,16 @@
 .carousel {
   background-color: $bg-carousel;
   padding: 264px 0 67px;
+
+  @include desktop-md {
+      display: none;
+    }
+
   &__items {
     display: flex;
     align-items: center;
   }
+
   &__item {
     display: flex;
     align-items: center;

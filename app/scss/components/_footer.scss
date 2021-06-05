@@ -9,12 +9,30 @@
     grid-template-columns: 300px 300px 300px 283px;
     padding-bottom: 75px;
     border-bottom: 1px solid #a3bbc8;
+
+    @include desktop-lg {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+    }
+
+    @include desktop-md {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 75px 0 50px;
+    }
+
+    @include desktop-xs {
+      grid-template-columns: 1fr;
+      padding: 50px 0 30px;
+    }
   }
 
   &__logo {
     display: block;
-    margin-top: -17px;
-    margin-bottom: 24px;
+    margin: -17px 0 15px;
+
+    @include desktop-lg {
+      margin: 0 0 15px;
+    }
   }
 
   &__title {
@@ -28,6 +46,7 @@
 
   &__link {
     transition: color 0.3s ease;
+
     &:hover {
       color: $bgc-nav;
     }
@@ -35,9 +54,13 @@
 
   &__p {
     margin-bottom: 42px;
+
+    @include desktop-lg {
+      margin-bottom: 20px;
+    }
   }
 
-  &__element {
+  &__element:not(:last-child) {
     margin-bottom: 12px;
   }
 }
@@ -68,6 +91,7 @@
 
   &__link {
     transition: color 0.3s ease;
+
     &:hover {
       color: $bgc-nav;
     }
@@ -79,6 +103,7 @@
   padding: 9px 11px;
   background-color: #fef7f0;
   border: 0;
+
   &::placeholder {
     @extend %quicksand-400;
     font-size: 12px;
@@ -92,6 +117,7 @@
   color: $white;
   background-color: #a3bbc8;
   transition: background-color 0.3s ease;
+
   &:hover {
     background-color: $blue;
   }
@@ -100,14 +126,29 @@
 .disclaimer {
   display: flex;
   justify-content: space-between;
-  padding: 32px 0;
+  padding: 39px 0;
   font-size: 14px;
   @extend %rubik-400;
   color: $footer-link;
 
+  @include desktop-xs {
+    padding: 25px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    & p {
+      order: 2;
+    }
+  }
+
   &__items {
     display: flex;
-    
+
+    @include desktop-xs {
+      order: 1;
+      margin-bottom: 20px;
+    }
   }
 
   &__item {

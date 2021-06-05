@@ -4,6 +4,15 @@
     min-height: 820px;
     padding-top: 100px;
     background-color: $slider-bg;
+
+    @include desktop-lg {
+      min-height: 560px;
+      padding: 50px 0;
+    }
+
+    @include desktop-xs {
+      min-height: 450px;
+    }
   }
 
   &__wrap,
@@ -11,19 +20,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include desktop-xs {
+      justify-content: left;
+    }
   }
 
   .slick-dots {
     position: absolute;
-    bottom: 40px;
+    bottom: 45px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-48%);
+
+    @include desktop-xxs {
+      bottom: 25px;
+    }
   }
 
   &__content {
     width: 100%;
-    max-width: 470px;
-    min-height: 365px;
+    max-width: 501px;
+    min-height: 375px;
+
+    @include desktop-md {
+      max-width: 310px;
+    }
+
+    @include desktop-xs {
+      width: 100%;
+      margin-left: 30px;
+    }
+
+    @include desktop-xxs {
+      width: 100%;
+      margin-left: 15px;
+    }
   }
 
   &__title {
@@ -32,24 +63,34 @@
     line-height: 1;
     text-transform: uppercase;
     color: $title;
+
+    @include desktop-lg {
+      font-size: 52px;
+    }
+
+    @include desktop-xxs {
+      font-size: 36px;
+    }
   }
 
   &__content p {
     @extend %rubik-400;
     max-width: 356px;
-    margin: 25px 0 40px;
+    margin: 25px 0 37px;
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.6;
+
+    @include desktop-xxs {
+      max-width: 270px;
+      font-size: 16px;
+    }
   }
 
   &__link {
-    display: block;
-    max-width: 200px;
     position: relative;
-    padding: 20px;
     background-color: #a3bbc8;
     color: $white;
-    transition: background-color 0.3s linear;
+
     &:hover {
       background-color: $blue;
     }
@@ -66,13 +107,27 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
+    max-width: 670px;
     min-height: 607px;
     display: flex;
     align-items: center;
+
+    @include desktop-lg {
+      max-width: 500px;
+      min-height: 540px;
+    }
+
+    @include desktop-xs {
+      display: none;
+    }
   }
 
   &__picture {
     margin-right: 60px;
+
+    @include desktop-lg {
+      margin-right: 0;
+    }
   }
 
   .slick-dots {
@@ -87,6 +142,7 @@
       width: 30px;
       height: 30px;
       transition: background-color 0.3s linear;
+
       &:hover {
         background-color: $white;
       }
@@ -99,64 +155,125 @@
 }
 
 .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fef7f0;
+
+  @include desktop-xs {
+    flex-direction: column;
+  }
+
+  &__items {
+    width: 100%;
+    max-width: 600px;
+    min-height: 170px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #fef7f0;
-    &__items {
-      width: 100%;
-      max-width: 600px;
-      min-height: 170px;
-      display: flex;
-      align-items: center;
-      &:not(:last-child) {
-        border-right: 1px solid #e8e4df;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+
+      @include desktop-xs {
+        border-right: none;
+        border-bottom: 1px solid #e8e4df;
       }
     }
 
-    &__item {
+    @include desktop-lg {
+      min-height: 140px;
+    }
+
+    @include desktop-md {
+      min-height: 100px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include desktop-md {
+      max-width: 250px;
+    }
+
+    @include desktop-xs {
       width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
+      margin: 0;
+    }
+  }
+
+  &__item p {
+    max-width: 300px;
+    padding-left: 77px;
+    margin-top: 10px;
+    color: #585858;
+    line-height: 1.6;
+    @extend %quicksand-400;
+
+    @include desktop-md {
+      margin-top: 0;
+      padding-left: 50px;
+      line-height: 1.4;
     }
 
-    &__item p {
-      max-width: 300px;
-      padding-left: 77px;
-      margin-top: 10px;
-      color: #585858;
-      line-height: 1.6;
-      @extend %quicksand-400;
+    @include desktop-xs {
+      width: 100vw;
     }
 
-    &__span {
-      position: relative;
-      padding-left: 80px;
-      font-size: 18px;
-      @extend %rubik-700;
-      color: #414141;
+    @include desktop-xxs {
+      padding-left: 45px;
+      max-width: 270px;
+      line-height: 1.1;
+      font-size: 14px;
+    }
+  }
+
+  &__span {
+    position: relative;
+    padding-left: 80px;
+    font-size: 18px;
+    @extend %rubik-700;
+    color: #414141;
+
+    @include desktop-md {
+      padding-left: 50px;
+      font-size: 16px;  
     }
 
-    &__span::before {
-      position: absolute;
-      content: "";
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      width: 50px;
-      height: 50px;
-      left: 0;
+    @include desktop-xxs {
+      padding-left: 45px;
     }
 
-    &__span--supp::before {
+    &--supp::before {
       background-image: url("../images/info/Shape 1.png");
     }
 
-    &__span--del::before {
+    &--del::before {
       background-image: url("../images/info/deluvery.png");
     }
 
-    &__span--pay::before {
+    &--pay::before {
       background-image: url("../images/info/card.png");
     }
   }
+
+  &__span::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    left: 0;
+
+    @include desktop-md {
+      width: 35px;
+      height: 35px;
+      top: 10px;
+      left: 5px;
+    }
+  }
+}

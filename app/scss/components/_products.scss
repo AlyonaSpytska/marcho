@@ -1,6 +1,10 @@
 .products {
   padding-top: 65px;
 
+  @include desktop-xxs {
+      padding-top: 30px;
+    }
+
   &__line {
     position: relative;
   }
@@ -10,36 +14,55 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
     margin-bottom: 198px;
-  }
 
-  &__card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    min-height: 375px;
-    padding: 0px 10px 30px;
-    border-radius: 10px;
-    @extend %quicksand-500;
-    background-color: $white;
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05%);
-  }
+    @include desktop-lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-  &__card--img {
+    @include desktop-md {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 100px;
+    }
+
+    @include desktop-xs {
+      margin: 0 auto 100px;
+    }
+
+    @include desktop-xxs {
+      grid-template-columns: 1fr;
+      max-width: 300px;
+      grid-gap: 30px;
+    }
+  }
+}
+
+.products-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 375px;
+  padding: 0 10px 30px;
+  border-radius: 10px;
+  @extend %quicksand-500;
+  background-color: $white;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05%);
+
+  &__img {
     margin: auto;
   }
 
-  &__card--title {
+  &__title {
     margin-bottom: 9px;
   }
 
-  &__card--price {
+  &__price {
     @extend %quicksand-700;
     color: #a3bbc8;
   }
 
-  &__card--selection {
+  &__selection {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -48,18 +71,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s ease;
     opacity: 0;
+
     &:hover {
       opacity: 1;
     }
   }
 
-  &__card--point:not(:last-child) {
+  &__point {
+    margin-top: 40px;
+  }
+
+  &__point:not(:last-child) {
     margin-right: 16px;
   }
 
-  &__card--link {
+  &__link {
     width: 45px;
     height: 45px;
     background-color: $white;
@@ -73,6 +101,8 @@
     svg {
       width: 20px;
       height: 20px;
+      fill: $btn-col;
+
       &:hover {
         fill: $white;
       }
@@ -82,97 +112,186 @@
       background-color: #a3bbc8;
     }
   }
+}
 
+.lamps {
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
 
-  .lamps {
-    &__items {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 30px;
+    @include desktop-md {
+      grid-template-columns: 1fr;
+      grid-gap: 55px;
     }
 
-    &__item {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 390px;
-      background-color: #feefe2;
+    @include desktop-xxs {
+      grid-gap: 25px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 390px;
+    background-color: #feefe2;
+
+    @include desktop-md {
+      min-height: 350px;
     }
 
-    &__content {
-      position: relative;
-      padding-left: 255px;
+    @include desktop-xs {
+      justify-content: flex-start;
     }
 
-    &__content--right {
-      padding-left: 330px;
+    @include desktop-xxs {
+      min-height: 250px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-left: 255px;
+
+    @include desktop-lg {
+      padding-left: 200px;
     }
 
-    &__content p {
-      max-width: 346px;
-      margin-bottom: 35px;
-      line-height: 1.6;
-      color: $lamp-color;
+    @include desktop-xs {
+      padding-left: 165px;
     }
 
-    &__title {
-      text-align: left;
-      max-width: 260px;
-      margin-bottom: 15px;
-      font-size: 26px;
-      color: $lamp-color;
+    @include desktop-xxs {
+      padding-left: 15px;
+    }
+  }
+
+  &__content--right {
+    padding-left: 330px;
+
+    @include desktop-lg {
+      padding-left: 230px;
     }
 
-    &__img {
-      position: absolute;
+    @include desktop-xs {
+      padding-left: 160px;
+    }
+
+    @include desktop-xxs {
+      padding: 0 5px;
+    }
+  }
+
+  &__content p {
+    max-width: 346px;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    color: $lamp-color;
+
+    @include desktop-xxs {
+      width: 100%;
+      line-height: 1.2;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    max-width: 260px;
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: $lamp-color;
+
+    @include desktop-xxs {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-height: 400px;
+    max-width: 235px;
+
+    @include desktop-lg {
+      min-height: 330px;
+      max-width: 170px;
+    }
+
+    @include desktop-xs {
+      min-height: 280px;
+      max-width: 150px;
+    }
+
+    @include desktop-xs {
+      min-height: 225px;
+      max-width: 130px;
+    }
+
+    @include desktop-xxs {
+      display: none;
+    }
+  }
+
+  &__img--right {
+    left: 50px;
+
+    @include desktop-lg {
       left: 0;
-      bottom: 0;
-      height: 400px;
-      max-width: 235px;
     }
 
-    &__img--right {
-      left: 50px;
+    @include desktop-xxs {
+      display: none;
     }
-    
-    &__link {
-      position: relative;
-      display: block;
-      max-width: 180px;
-      padding: 20px;
-      border: 1px solid #d8d3cc;
-      border-radius: 5px;
-      color: #243f4d;
-      transition: background-color 0.4s linear;
-      &::after {
-        position: absolute;
-        content: url("../images/lamps/arrow.svg");
-        right: 19px;
-      }
-      &:hover {
-        background-color: $btn-col;
-      }
+  }
+
+  &__link {
+    position: relative;
+    border: 1px solid #d8d3cc;
+    border-radius: 5px;
+    color: $title;
+
+    &::after {
+      position: absolute;
+      content: url("../images/lamps/arrow.svg");
+      right: 19px;
+    }
+
+    &:hover {
+      background-color: $btn-col;
     }
   }
 }
 
- .filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 75px;
-    &__item:not(:last-child) {
-      margin-right: 15px;
-    }
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
 
-    &__btn {
-      border: none;
-      @extend %quicksand-700;
-      color: $gallery-button;
-    }
+  @include desktop-xs {
+    margin-bottom: 50px;
+  }
 
-    .mixitup-control-active {
-      color: $main-title;
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__btn {
+    border: none;
+    @extend %quicksand-700;
+    color: $gallery-button;
+
+    @include desktop-xs {
+      padding: 10px;
     }
   }
+
+  .mixitup-control-active {
+    color: $main-title;
+  }
+}
