@@ -1,0 +1,15 @@
+@mixin desktop-lg {
+  @media (max-width: 1200px) { @content; }
+};
+
+@mixin desktop-md {
+  @media (max-width: 1024px) { @content; }
+};
+
+@mixin desktop-xs {
+  @media (max-width: 768px) { @content; }
+};
+
+@mixin desktop-xxs {
+  @media (max-width: 480px) { @content; }
+}
