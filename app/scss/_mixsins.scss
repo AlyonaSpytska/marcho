@@ -1,3 +1,7 @@
+@mixin _1400 {
+  @media (max-width: 1400px) { @content; }
+};
+
 @mixin desktop-lg {
   @media (max-width: 1200px) { @content; }
 };
@@ -8,6 +12,10 @@
 
 @mixin desktop-xs {
   @media (max-width: 768px) { @content; }
+};
+
+@mixin _597 {
+  @media (max-width: 597px) { @content; }
 };
 
 @mixin desktop-xxs {

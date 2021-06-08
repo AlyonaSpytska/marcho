@@ -15,7 +15,7 @@ body {
 
   @include desktop-md {
     &.lock {
-        overflow: hidden;
+      overflow: hidden;
     }
   }
 }
@@ -53,23 +53,27 @@ body {
   margin-bottom: 26px;
 
   @include desktop-xs {
-      font-size: 27px;
-    }
+    font-size: 27px;
+  }
+
+  @include desktop-xs {
+    font-size: 22px;
+  }
 }
 
-.shop__link {
+.link {
   display: block;
   max-width: 200px;
   padding: 21px 20px 21px 27px;
   transition: background-color 0.5s, color 0.5s;
 
   @include desktop-md {
-      max-width: 170px;
-      padding: 15px;
-    }
+    max-width: 170px;
+    padding: 15px;
+  }
 
   @include desktop-xs {
-      max-width: 150px;
-      padding: 13px;
-    }
+    max-width: 150px;
+    padding: 13px 35px 13px 13px;
+  }
 }

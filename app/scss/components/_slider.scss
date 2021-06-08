@@ -13,6 +13,10 @@
     @include desktop-xs {
       min-height: 450px;
     }
+
+    @include desktop-xxs {
+      padding: 0;
+    }
   }
 
   &__wrap,
@@ -20,9 +24,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
+  &__wrap {
     @include desktop-xs {
-      justify-content: left;
+      flex-direction: column;
     }
   }
 
@@ -43,17 +49,14 @@
     min-height: 375px;
 
     @include desktop-md {
-      max-width: 310px;
+      max-width: 340px;
     }
 
     @include desktop-xs {
+      order: 2;
       width: 100%;
-      margin-left: 30px;
-    }
-
-    @include desktop-xxs {
-      width: 100%;
-      margin-left: 15px;
+      padding-left: 0;
+      text-align: center;
     }
   }
 
@@ -63,12 +66,13 @@
     line-height: 1;
     text-transform: uppercase;
     color: $title;
+    margin-bottom: 25px;
 
     @include desktop-lg {
       font-size: 52px;
     }
 
-    @include desktop-xxs {
+    @include desktop-xs {
       font-size: 36px;
     }
   }
@@ -76,11 +80,16 @@
   &__content p {
     @extend %rubik-400;
     max-width: 356px;
-    margin: 25px 0 37px;
+    margin-bottom: 37px;
     font-size: 18px;
     line-height: 1.6;
 
     @include desktop-xxs {
+      max-width: 320px;
+    }
+
+    @include desktop-xxs {
+      margin: 0 auto 20px;
       max-width: 270px;
       font-size: 16px;
     }
@@ -88,8 +97,12 @@
 
   &__link {
     position: relative;
-    background-color: #a3bbc8;
+    background-color: $btn-col;
     color: $white;
+
+    @include desktop-xs {
+      margin: 0 auto;
+    }
 
     &:hover {
       background-color: $blue;
@@ -100,6 +113,10 @@
     position: absolute;
     content: url("../images/header__slider/arrow-right.png");
     right: 20px;
+
+    @include desktop-xs {
+      right: 10px;
+    }
   }
 
   &__img {
@@ -118,7 +135,19 @@
     }
 
     @include desktop-xs {
-      display: none;
+      max-width: 370px;
+      min-height: 350px;
+    }
+
+    @include desktop-xs {
+      order: 1;
+      max-width: 300px;
+      min-height: 220px;
+    }
+
+    @include desktop-xs {
+      margin: 0 auto;
+      background-image: none;
     }
   }
 
@@ -143,6 +172,12 @@
       height: 30px;
       transition: background-color 0.3s linear;
 
+      @include desktop-xxs {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+      }
+
       &:hover {
         background-color: $white;
       }
@@ -158,7 +193,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fef7f0;
+  background-color: $bg-carousel;
 
   @include desktop-xs {
     flex-direction: column;
@@ -187,6 +222,13 @@
     @include desktop-md {
       min-height: 100px;
     }
+
+    @include desktop-xs {
+      justify-content: center;
+      padding: 30px 0;
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__item {
@@ -200,6 +242,7 @@
 
     @include desktop-xs {
       width: 100%;
+      max-width: none;
       margin: 0;
     }
   }
@@ -219,14 +262,10 @@
     }
 
     @include desktop-xs {
-      width: 100vw;
-    }
-
-    @include desktop-xxs {
-      padding-left: 45px;
-      max-width: 270px;
-      line-height: 1.1;
-      font-size: 14px;
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      max-width: none;
     }
   }
 
@@ -239,11 +278,16 @@
 
     @include desktop-md {
       padding-left: 50px;
-      font-size: 16px;  
+      font-size: 16px;
     }
 
-    @include desktop-xxs {
-      padding-left: 45px;
+    @include desktop-xs {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 20px;
     }
 
     &--supp::before {
@@ -274,6 +318,12 @@
       height: 35px;
       top: 10px;
       left: 5px;
+    }
+
+    @include desktop-xs {
+      left: 50%;
+      transform: translateX(-50%);
+      top: -40px;
     }
   }
 }

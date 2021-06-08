@@ -1,8 +1,17 @@
 .footer {
+  padding-top: 100px;
   @extend %quicksand-400;
   font-size: 14px;
   color: $footer-link;
   font-style: normal;
+
+  @include desktop-lg {
+      padding-top: 50px;
+    }
+
+  @include desktop-md{
+      padding-top: 0;
+    }
 
   &__wrapper {
     display: grid;
@@ -20,7 +29,7 @@
       padding: 75px 0 50px;
     }
 
-    @include desktop-xs {
+    @include _597 {
       grid-template-columns: 1fr;
       padding: 50px 0 30px;
     }
@@ -137,7 +146,7 @@
     justify-content: center;
     text-align: center;
 
-    & p {
+    p {
       order: 2;
     }
   }

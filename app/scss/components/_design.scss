@@ -2,8 +2,8 @@
   padding: 92px 0 110px;
 
   @include desktop-lg {
-      padding: 60px 0;
-    }
+    padding: 60px 0;
+  }
 
   &__maintitle {
     margin-bottom: 20px;
@@ -15,6 +15,10 @@
     grid-gap: 30px;
     margin-bottom: 117px;
 
+    &.mix {
+      display: none;
+    }
+
     @include desktop-lg {
       grid-template-columns: repeat(2, 370px);
       justify-content: center;
@@ -22,6 +26,10 @@
     }
 
     @include desktop-xs {
+      grid-template-columns: 430px;
+    }
+
+    @include desktop-xxs {
       grid-template-columns: 1fr;
     }
   }
@@ -77,6 +85,14 @@
   background-position: center;
   align-items: center;
 
+  @include desktop-xs {
+    min-height: 380px;
+  }
+
+  @include desktop-xs {
+    min-height: 250px;
+  }
+
   &__pulse {
     margin: 100px;
     display: block;
@@ -84,8 +100,13 @@
     height: 100px;
     border-radius: 50%;
     background-color: $btn-col;
-    box-shadow: 0 0 0 rgba(163, 187, 200, 0.8);
+    box-shadow: 0 0 0 rgba($btn-col, 0.8);
     animation: pulse 3s infinite;
+
+    @include desktop-xs {
+      width: 75px;
+      height: 75px;
+    }
 
     @include desktop-xxs {
       width: 60px;
@@ -99,18 +120,15 @@
 
   @keyframes pulse {
     0% {
-      box-shadow: 0 0 0 0 rgba(163, 187, 200, 0.8);
-      box-shadow: 0 0 0 0 rgba(163, 187, 200, 0.8);
+      box-shadow: 0 0 0 0 rgba($btn-col, 0.8);
     }
 
     70% {
-      box-shadow: 0 0 0 20px rgba(163, 187, 200, 0);
-      box-shadow: 0 0 0 20px rgba(163, 187, 200, 0);
+      box-shadow: 0 0 0 20px rgba($btn-col, 0);
     }
 
     100% {
-      box-shadow: 0 0 0 0 rgba(163, 187, 200, 0);
-      box-shadow: 0 0 0 0 rgba(163, 187, 200, 0);
+      box-shadow: 0 0 0 0 rgba($btn-col, 0);
     }
   }
 }
