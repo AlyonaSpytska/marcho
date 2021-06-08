@@ -13,70 +13,6 @@
     padding: 20px 0;
   }
 
-  &__burger {
-    position: absolute;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    border: 1px solid transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $default;
-    border-radius: 50%;
-    z-index: 20;
-    transition: border-color 0.4 ease;
-    opacity: 0;
-
-    @include desktop-md {
-      opacity: 1;
-    }
-
-    span {
-      position: absolute;
-      content: "";
-      width: 65%;
-      height: 2px;
-      background-color: $white;
-      transition: 0.4s;
-    }
-
-    &::after,
-    &::before {
-      position: absolute;
-      content: "";
-      width: 65%;
-      height: 2px;
-      background-color: $white;
-      transition: 0.4s;
-    }
-
-    &::before {
-      top: 12px;
-    }
-
-    &::after {
-      bottom: 12px;
-    }
-
-    &.menu__burger--active::before {
-      background-color: transparent;
-    }
-
-    &.menu__burger--active span {
-      transform: rotate(45deg);
-    }
-
-    &.menu__burger--active::after {
-      bottom: 17px;
-      transform: rotate(-45deg);
-    }
-
-    @include desktop-md {
-      display: flex;
-    }
-  }
-
   &__items,
   &__users {
     display: flex;
@@ -104,16 +40,21 @@
   }
 
   &__items {
-    padding-left: 150px;
+    width: 100%;
+    max-width: 635px;
+    justify-content: flex-end;
 
     @include desktop-lg {
-      padding-left: 50px;
+      justify-content: center;
     }
 
     @include desktop-md {
       position: absolute;
       top: 0px;
+      left: 0;
+      right: 0;
       width: 100%;
+      max-width: none;
       height: 100vh;
       padding-left: 0;
       justify-content: center;
@@ -122,11 +63,11 @@
       z-index: 10;
       transition: transform 0.5s linear;
       transform: translateX(-110%);
-      background-color: rgba(252, 215, 182, 0.9);
+      background-color: rgba($bgc-nav, 0.9);
       color: $default;
 
       &.active {
-        transform: translateX(-4%);
+        transform: translateX(0);
         transition: transform 0.5s linear;
       }
     }
@@ -164,6 +105,11 @@
       &:hover {
         color: $default;
       }
+    }
+
+    @include desktop-xs {
+      padding: 10px 15px;
+      font-size: 20px;
     }
   }
 
@@ -239,20 +185,22 @@
     &--fav:hover,
     &--basket:hover {
       background-color: $btn-col;
+      fill: $white;
     }
 
     &--option:hover,
     &--search:hover {
       background-color: $bgc-nav;
+      fill: $white;
     }
   }
 
   &__icon {
     width: 20px;
     height: 20px;
-    fill: #243f4d;
+    fill: $title;
 
-    &:hover {
+    &--option {
       fill: $white;
     }
 
@@ -260,10 +208,6 @@
       width: 15px;
       height: 15px;
     }
-  }
-
-  &__icon--option {
-    fill: $white;
   }
 
   &__num {
@@ -274,15 +218,79 @@
     top: 10px;
     right: 25%;
     height: 15px;
-    padding: 0 5px;
+    padding: 0 4px;
     @extend %quicksand-400;
     font-size: 10px;
     border-radius: 10px;
     background-color: $white;
 
     @include desktop-lg {
-      right: 15%;
+      right: 20%;
+      top: 6px;
     }
+
+    @include desktop-md {
+      top: 3px;
+    }
+  }
+}
+
+.burger {
+  position: absolute;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $default;
+  border-radius: 50%;
+  z-index: 20;
+  opacity: 0;
+
+  @include desktop-md {
+    opacity: 1;
+  }
+
+  &__part {
+    position: absolute;
+    content: "";
+    width: 65%;
+    height: 2px;
+    background-color: $white;
+    transition: transform 0.3s linear;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 65%;
+    height: 2px;
+    background-color: $white;
+    transition: background-color 0.3s linear, transform 0.3s linear;
+  }
+
+  &::before {
+    top: 12px;
+  }
+
+  &::after {
+    bottom: 12px;
+  }
+
+  &.active::before {
+    background-color: transparent;
+  }
+
+  &.active &__part {
+    transform: rotate(45deg);
+  }
+
+  &.active::after {
+    bottom: 17px;
+    transform: rotate(-45deg);
   }
 }
 

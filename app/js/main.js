@@ -1,7 +1,19 @@
-$(function () {
-  $('.menu__burger').on('click', function () {
+$(function() {
+  var containerEl1 = document.querySelector('[data-ref="container-1"]');
+  var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
+
+  $('.burger').on('click', function() {
     $('.menu__items').toggleClass('active');
-    $('.menu__burger').toggleClass('menu__burger--active');
+    $('.burger').toggleClass('active');
     $('body').toggleClass('lock');
   });
 
@@ -9,10 +21,6 @@ $(function () {
     arrows: false,
     dots: true
   });
-
-  mixitup('.products__items');
-  mixitup('.design__items');
-
 
   $('.carousel__items').slick({
     arrows: false,

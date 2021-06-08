@@ -2,8 +2,8 @@
   padding-top: 65px;
 
   @include desktop-xxs {
-      padding-top: 30px;
-    }
+    padding-top: 30px;
+  }
 
   &__line {
     position: relative;
@@ -13,18 +13,22 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
-    margin-bottom: 198px;
+    margin-bottom: 196px;
+
+    &.mix {
+      display: none;
+    }
 
     @include desktop-lg {
       grid-template-columns: repeat(3, 1fr);
     }
 
     @include desktop-md {
-      grid-template-columns: repeat(2, 1fr);
       margin-bottom: 100px;
     }
 
     @include desktop-xs {
+      grid-template-columns: repeat(2, 1fr);
       margin: 0 auto 100px;
     }
 
@@ -54,12 +58,13 @@
   }
 
   &__title {
-    margin-bottom: 9px;
+    font-size: 18px;
+    margin-bottom: 6px;
   }
 
   &__price {
     @extend %quicksand-700;
-    color: #a3bbc8;
+    color: $btn-col;
   }
 
   &__selection {
@@ -109,24 +114,18 @@
     }
 
     &:hover {
-      background-color: #a3bbc8;
+      background-color: $btn-col;
     }
   }
 }
 
 .lamps {
   &__items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+    display: flex;
+    justify-content: space-between;
 
     @include desktop-md {
-      grid-template-columns: 1fr;
-      grid-gap: 55px;
-    }
-
-    @include desktop-xxs {
-      grid-gap: 25px;
+      flex-direction: column;
     }
   }
 
@@ -135,116 +134,73 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     min-height: 390px;
+    padding: 15px;
     background-color: #feefe2;
 
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
     @include desktop-md {
-      min-height: 350px;
-    }
-
-    @include desktop-xs {
-      justify-content: flex-start;
-    }
-
-    @include desktop-xxs {
-      min-height: 250px;
+      &:not(:last-child) {
+        margin: 0 0 40px;
+      }
     }
   }
 
   &__content {
-    position: relative;
-    padding-left: 255px;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 
     @include desktop-lg {
-      padding-left: 200px;
-    }
-
-    @include desktop-xs {
-      padding-left: 165px;
+      flex-direction: row-reverse;
     }
 
     @include desktop-xxs {
-      padding-left: 15px;
-    }
-  }
-
-  &__content--right {
-    padding-left: 330px;
-
-    @include desktop-lg {
-      padding-left: 230px;
-    }
-
-    @include desktop-xs {
-      padding-left: 160px;
-    }
-
-    @include desktop-xxs {
-      padding: 0 5px;
+      flex-direction: column;
     }
   }
 
   &__content p {
-    max-width: 346px;
-    margin-bottom: 35px;
-    line-height: 1.6;
+    max-width: 360px;
+    margin-bottom: 30px;
+    line-height: 1.7;
     color: $lamp-color;
-
-    @include desktop-xxs {
-      width: 100%;
-      line-height: 1.2;
-    }
   }
 
   &__title {
     text-align: left;
-    max-width: 260px;
-    margin-bottom: 15px;
+    max-width: 262px;
+    margin-bottom: 20px;
     font-size: 26px;
     color: $lamp-color;
-
-    @include desktop-xxs {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
   }
 
   &__img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    min-height: 400px;
-    max-width: 235px;
+    width: 100%;
+    max-width: 230px;
+    margin: -180px auto 0;
 
     @include desktop-lg {
-      min-height: 330px;
-      max-width: 170px;
+      margin-top: -130px;
+      max-width: 190px;
     }
 
-    @include desktop-xs {
-      min-height: 280px;
+    @include desktop-md {
+      margin-top: -30px;
       max-width: 150px;
     }
 
     @include desktop-xs {
-      min-height: 225px;
       max-width: 130px;
     }
 
     @include desktop-xxs {
-      display: none;
-    }
-  }
-
-  &__img--right {
-    left: 50px;
-
-    @include desktop-lg {
-      left: 0;
-    }
-
-    @include desktop-xxs {
-      display: none;
+      margin: -30px auto 20px 0;
     }
   }
 
@@ -294,4 +250,8 @@
   .mixitup-control-active {
     color: $main-title;
   }
+}
+
+#Container .mix {
+  display: none;
 }
